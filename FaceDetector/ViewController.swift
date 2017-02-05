@@ -21,28 +21,28 @@ class ViewController: UIViewController, VideoFeedDelegate {
         videoFeed.delegate = self
     }
 
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
         try! videoFeed.start()
     }
 
-    override func viewDidDisappear(animated: Bool) {
+    override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
 
         videoFeed.stop()
     }
 
-    func videoFeed(videoFeed: VideoFeed, didUpdateWithSampleBuffer sampleBuffer: CMSampleBuffer!) {
+    func videoFeed(_ videoFeed: VideoFeed, didUpdateWithSampleBuffer sampleBuffer: CMSampleBuffer!) {
         let detector = CIDetector(ofType: CIDetectorTypeFace, context:nil, options:[CIDetectorMinFeatureSize: 0.5])
 
-        let image = CIImage(CVPixelBuffer: CMSampleBufferGetImageBuffer(sampleBuffer)!)
-        let faceFeatures = detector.featuresInImage(image, options: [CIDetectorSmile: true])
+        let image = CIImage(cvPixelBuffer: CMSampleBufferGetImageBuffer(sampleBuffer)!)
+        let faceFeatures = detector?.features(in: image, options: [CIDetectorSmile: true])
 
         var instructions: String
         var smiley: String
 
-        if let face = faceFeatures.first as? CIFaceFeature {
+        if let face = faceFeatures?.first as? CIFaceFeature {
             if face.hasSmile {
                 smiley = "😀"
                 instructions = ""
@@ -55,10 +55,10 @@ class ViewController: UIViewController, VideoFeedDelegate {
             instructions = "Where are you? I can't see your face!"
         }
 
-        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+        DispatchQueue.main.async(execute: { () -> Void in
             self.faceLabel.text = smiley
             self.instructionsLabel.text = instructions
-            self.feedImageView.image = UIImage(CIImage: image)
+            self.feedImageView.image = UIImage(ciImage: image)
         })
     }
 }
