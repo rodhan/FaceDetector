@@ -14,7 +14,6 @@
 		574F7C681C95915900C4375B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 574F7C661C95915900C4375B /* LaunchScreen.storyboard */; };
 		574F7C701C9592D400C4375B /* VideoFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574F7C6F1C9592D400C4375B /* VideoFeed.swift */; };
 		96FA34E07792ECFDDD913DEC /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F3747EE65519FBBDBB8C668 /* CoreText.framework */; };
-		9E99A705716EC75CA4F0E071 /* BuddyBuildSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 253EC99E8D1294B6F9CE7F49 /* BuddyBuildSDK.framework */; };
 		B22DAC10D5FF776344DC0972 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7CED9C05F44099B75308557 /* CoreTelephony.framework */; };
 		C6EF0ABDC8A5149FDA9F8F39 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 875E918A60B63440E3A743BF /* AssetsLibrary.framework */; };
 		D3AD2B0F01E522C6DC704184 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9F653FDD319E281B9AD89C0 /* SystemConfiguration.framework */; };
@@ -22,7 +21,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		253EC99E8D1294B6F9CE7F49 /* BuddyBuildSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BuddyBuildSDK.framework; sourceTree = "<group>"; };
 		46C265DAA0B96711A5A7A88E /* Bridging-Header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		574F7C5A1C95915900C4375B /* FaceDetector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceDetector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		574F7C5D1C95915900C4375B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,7 +42,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E99A705716EC75CA4F0E071 /* BuddyBuildSDK.framework in Frameworks */,
 				C6EF0ABDC8A5149FDA9F8F39 /* AssetsLibrary.framework in Frameworks */,
 				96FA34E07792ECFDDD913DEC /* CoreText.framework in Frameworks */,
 				B22DAC10D5FF776344DC0972 /* CoreTelephony.framework in Frameworks */,
@@ -91,7 +88,6 @@
 		D543F8EB153C2CDE98DCA63D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				253EC99E8D1294B6F9CE7F49 /* BuddyBuildSDK.framework */,
 				875E918A60B63440E3A743BF /* AssetsLibrary.framework */,
 				5F3747EE65519FBBDBB8C668 /* CoreText.framework */,
 				A7CED9C05F44099B75308557 /* CoreTelephony.framework */,
